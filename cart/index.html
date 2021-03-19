@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Webshop | buy what you want</title>
+  </head>
+  <body>
+    <header>
+      <div class="overlay">
+        <nav>
+          <h2>SHOP</h2>
+          <ul>
+            <li><a href="../">Home</a></li>
+          </ul>
+          <ul>
+            <li><a href="../about/">About</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a href="./" class="cart"
+                ><ion-icon name="basket"></ion-icon>Cart<span>0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="cart-section">
+      <div class="cart-container">
+        <div class="cart-header">
+          <h4 class="cart-title">PRODUCT</h4>
+          <h4 class="cart-price">PRICE</h4>
+          <h4 class="cart-quantity">QUANTITY</h4>
+          <h4 class="cart-total">TOTAL</h4>
+        </div>
+        <div class="cart-products"></div>
+        <div class="cart-total-price">
+          <h3>Total price:</h3>
+          <h3 id="total-price" class="total-cart-price-number">0</h3>
+        </div>
+        <div class="button-container">
+          <button id="clear-cart-btn">Clear Cart</button>
+        </div>
+      </div>
+      <div class="form-container">
+        <h1>Customer Information</h1>
+        <form id="validate-form">
+          <div>
+            <input
+              type="text"
+              id="form-first-name"
+              name=""
+              autocomplete="off"
+              required
+            />
+            <span class="error-form" id="fname-error-message"></span>
+            <label for="name">Firstname</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="form-last-name"
+              name=""
+              autocomplete="off"
+              required
+            />
+            <span class="error-form" id="lname-error-message"></span>
+            <label for="name">Lastname</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="form-email"
+              name="email"
+              autocomplete="off"
+              required
+            />
+            <span class="error-form" id="email-error-message"></span>
+            <label for="email">Email</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="form-address"
+              name="address"
+              autocomplete="off"
+              required
+            />
+            <span class="error-form" id="address-error-message"></span>
+            <label for="address">Address</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="form-phone"
+              name="phone"
+              autocomplete="off"
+              required
+            />
+            <span class="error-form" id="phone-error-message"></span>
+            <label for="phone">Phone number</label>
+          </div>
+          <button id="send-btn">Send Order btn</button>
+        </form>
+      </div>
+    </section>
+    <div class="footer"><h2>Shop &copy; 2021</h2></div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./cart.js"></script>
+    <script src="./form.js"></script>
+  </body>
+</html>

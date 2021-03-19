@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Webshop | buy what you want</title>
+  </head>
+  <body>
+    <header>
+      <div class="overlay">
+        <nav>
+          <h2>SHOP</h2>
+          <ul>
+            <li><a href="../">Home</a></li>
+          </ul>
+          <ul>
+            <li><a href="./">About</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a href="../cart/" class="cart"
+                ><ion-icon name="basket"></ion-icon>Cart<span>0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="about">
+      <h2>JAVA20 – Klientutveckling – Inlämningsuppgift 2 – (G-VG)</h2>
+      <p>
+        <span>Skapa en varukorg</span><br />OBS! Denna uppgift utförs enskilt
+        (ej grupparbete) Kravspecifikations <br />• Skapa en webbsida som visar
+        några produkter från Fake Store API https://fakestoreapi.com/ <br />•
+        Visa titel, beskrivning, bild och pris. <br />• Lägg till en knapp ”Köp
+        eller Lägg till” under varje produkt. Man ska alltså kunna beställa en
+        produkt (G-nivå). <br />• När en kund klickar på knappen så kommer man
+        till en beställningssida (eller till varukorgen). Du ska alltså skapa en
+        beställningssida som innehåller ett beställningsformulär. <br />Visa
+        info om den valda produkten högst upp på sidan. Kunden behöver ange
+        namn, telefon, e-post och leveransadress. Validera alla fält med
+        JavaScript. Visa lämpliga felmeddelanden. <br />• Vid beställning (när
+        kunden fyller i beställningsformuläret), Visa en bekräftelse på skärmen
+        t.ex. ”Tack för din beställning”. OS! Beställningen behöver ej skickas
+        via t.ex. e-post eller lagras i en databas. För VG-nivå ska du dessutom
+        arbeta med följande <br />• En kund ska kunna köpa flera olika produkter
+        och även kunna ändra antal produkter. <br /><br /><span
+          >Examination</span
+        >
+        <br /><br />1. Skriv en individuell rapport där du förklarar med dina
+        ord och några skärmbilder arbetsprocessen (valfritt antal sidor). Skriv
+        även dina egna reflektioner och slutsatser. Lägg till en länk till
+        projektet i rapporten (Länk till en GitHub-Repo). För VG behöver du
+        dessutom utförligt redogöra hur varukorgen fungerar. Förklara källkoden
+        som hanterar varukorgen. <br />2. Spara rapporten som PDF (ej Word eller
+        annat format). Ladda upp rapporten till studentportalen (ej via e-post).
+        Exempel på rapportens utformning finns här nedan.
+      </p>
+    </div>
+
+    <div class="footer"><h2>Shop &copy; 2021</h2></div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+      let productNumbers = parseInt(localStorage.getItem("cartNumbers"));
+      productNumbers
+        ? (document.querySelector(".cart span").textContent = productNumbers)
+        : (document.querySelector(".cart span").textContent = 0);
+    </script>
+  </body>
+</html>

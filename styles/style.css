@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+}
+button:hover {
+  background-color: #999;
+}
+
+header {
+  background-image: url("../img/pexels-martin-damboldt-814499\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 15vh;
+  height: 15vh;
+  position: relative;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(10, 10, 10, 0.3);
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3rem 3rem 0 4rem;
+}
+
+nav h2 {
+  margin-top: 2rem;
+  align-items: flex-start;
+  flex: 2 1 10rem;
+  color: #fff;
+  font-size: 3rem;
+}
+
+nav li {
+  flex: 1 1 10rem;
+  list-style: none;
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+nav li span {
+  padding-left: 0.5rem;
+}
+
+li a {
+  padding: 0.8rem;
+  color: rgb(43, 43, 43);
+  background-color: #fff;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: royalblue;
+}
+
+.cart ion-icon {
+  vertical-align: bottom;
+  font-size: 2.4rem;
+}
+
+/* Product card style */
+
+.home-title {
+  background-color: rgba(183, 224, 178, 0.103);
+}
+
+.home-title h2 {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  background-color: rgba(183, 224, 178, 0.103);
+}
+
+.product-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 15%;
+  min-width: 230px;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: white;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+}
+
+.product-title {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.product-img {
+  width: 80%;
+  margin: auto;
+  border-radius: 2rem;
+  padding: 1rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.product-text {
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.product-price {
+  font-size: 2rem;
+}
+
+.add-to-cart-btn {
+  font-size: 2rem;
+  padding: 1rem 3rem;
+  margin: 1rem;
+}
+
+/* footer style */
+
+.footer {
+  min-height: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(180, 180, 180);
+}
+
+/* cart Style */
+
+.cart-container {
+  width: 50%;
+  max-width: 800px;
+  min-height: 69vh;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 4%;
+}
+
+.cart-container ion-icon {
+  font-size: 2.5rem;
+  color: blue;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cart-ion-empty {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cart-header {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid grey;
+  margin: 0 auto;
+  font-size: 2.3rem;
+}
+.cart-font-size {
+  font-size: 2rem;
+}
+
+.cart-product {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid grey;
+}
+.cart-title {
+  width: 40%;
+}
+.cart-img {
+  width: 10%;
+}
+.cart-product-name {
+  padding-left: 3rem;
+  width: 20%;
+}
+.cart-price {
+  width: 13%;
+  display: flex;
+  align-items: center;
+}
+
+.cart-quantity {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.cart-total {
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.cart-total-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1rem;
+}
+.cart-total-price h3 {
+  padding-left: 3rem;
+  margin-right: 2rem;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+/* form style */
+.cart-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 4rem;
+  min-height: 60vh;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3%;
+  margin-right: 18%;
+  margin-left: 5%;
+  min-width: 450px;
+  height: 750px;
+  background: #fff;
+  padding: 45px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+}
+.form-container h1 {
+  text-align: center;
+  margin: 0 0 40px;
+  color: rgb(68, 68, 179);
+  letter-spacing: 2px;
+}
+.form-container input {
+  font-size: 2rem;
+  padding: 5px;
+  margin-bottom: 45px;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #999;
+}
+.form-container button {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.form-container form div {
+  position: relative;
+}
+.form-container form div label {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 3px;
+  pointer-events: none;
+  left: 0;
+  transition: 0.3s;
+}
+.form-container input:focus ~ label,
+.form-container input:valid ~ label {
+  left: 2px;
+  top: -20px;
+  color: rgb(68, 68, 179);
+  font-size: 1.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.form-container input:focus,
+.form-container input:valid {
+  border-bottom: 2px solid rgb(68, 68, 179);
+}
+
+.form-container form div span {
+  position: absolute;
+  left: 0;
+  bottom: 28px;
+  font-size: 15px;
+}
+/* --- about page --- */
+.about {
+  width: 70%;
+  margin: auto;
+  min-height: 78vh;
+  text-align: center;
+}
+.about h2 {
+  font-size: 3rem;
+  margin: 3rem;
+}
+.about p {
+  text-align: left;
+  font-size: 3rem;
+  line-height: 5rem;
+  padding: 2rem;
+}
+.about p span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1334px) {
+  .form-container {
+    margin: auto;
+  }
+}
