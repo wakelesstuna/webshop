@@ -1,47 +1,45 @@
 console.log("app.js running...");
 
 const products = [];
-const tempProducts = [];
-
 
 // https://webacademy.se/fakestore/
 // https://fakestoreapi.com/products
 function getAllProducts(){
     fetch('https://webacademy.se/fakestore/')
     .then(res=>res.json())
-    .then(data=> data.forEach(e => tempProducts.push(e)))
+    .then(data=> data.forEach(e => {
+        let productName = e.title;
+        productName = productName.substring(0,productName.indexOf(' '));
+        let price = parseInt(e.price);
+        const product = {
+            id: e.id,
+            title: e.title,
+            price: price,
+            category: e.category,
+            description: e.description,
+            image: e.image,
+            inCart: 0,
+            productName: productName
+            };
+            products.push(product);
+    }))
     .then(() => productRender())
     .then(() => addFuctionToAllProductCardButtons())
 }
 
-
 function productRender(){
+    console.log(products);
     let productContainer = document.querySelector('.product-container');
     if(productContainer){
         productContainer.innerHTML = '';
-    Object.values(tempProducts).map(e => {
-        let productName = e.title;
-        productName = productName.substring(0,productName.indexOf(' '));
-        let price = parseInt(e.price);
-        // createing product object       
-        const product = {
-        id: e.id,
-        title: e.title,
-        price: price,
-        category: e.category,
-        description: e.description,
-        image: e.image,
-        inCart: 0,
-        productName: productName
-        };
-        products.push(product);
+    Object.values(products).map(e => {
         productContainer.innerHTML += `
         <div class="product-div">
-            <h1 class="product-title">${product.title}</h1>
-            <img class="product-img"src="${product.image}" alt="product image">
-            <p class="product-text" >${product.description}</p>
-            <h2 class="product-price">${product.price}</h2>
-            <button class="add-to-cart-btn" id="${product.id}">Add to cart</button>
+            <h1 class="product-title">${e.title}</h1>
+            <img class="product-img"src="${e.image}" alt="product image">
+            <p class="product-text" >${e.description}</p>
+            <h2 class="product-price">${e.price}</h2>
+            <button class="add-to-cart-btn" id="${e.id}">Add to cart</button>
         </div>
         `;   
     });
@@ -68,7 +66,6 @@ function addFuctionToAllProductCardButtons() {
 // to save products in cart to local strage
 function addProductToCart(product){
     let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
-    
     if(cartItems != null){
         if(cartItems[product.id] == undefined){
             product.inCart = 1
