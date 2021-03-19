@@ -1,14 +1,13 @@
 console.log("cart.js running...");
 
-
 function renderCart(){
-    const products = JSON.parse(localStorage.getItem('productList'));
     let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
+    let cartProducts = document.querySelector('.cart-products');
+
     if(cartItems === null){
-        $("#total-price").text("0");
+        document.getElementById('total-price').textContent = "0";
     }
 
-    let cartProducts = document.querySelector('.cart-products');
     if(cartItems && cartProducts){
         cartProducts.innerHTML = '';
         // här sätter vi id på cart-product till den aktuellt 
@@ -31,7 +30,6 @@ function renderCart(){
 
         const addBtns = document.querySelectorAll('.add-product-to-cart');
         const removeBtns = document.querySelectorAll('.remove-product-to-cart');
-        const deleteBtns = document.querySelectorAll('.delete-product-from-cart');
 
         addBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -52,8 +50,7 @@ function renderCart(){
                 updateCartUI();
                 updateTotalPriceUI();
                 renderCart();
-                }
-                
+                }      
             });
         });        
     }

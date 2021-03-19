@@ -10,7 +10,7 @@ function getAllProducts(){
     .then(data=> data.forEach(e => {
         let productName = e.title;
         productName = productName.substring(0,productName.indexOf(' '));
-        let price = parseInt(e.price);
+        const price = parseInt(e.price);
         const product = {
             id: e.id,
             title: e.title,
@@ -28,11 +28,11 @@ function getAllProducts(){
 }
 
 function productRender(){
-    console.log(products);
-    let productContainer = document.querySelector('.product-container');
+    const productContainer = document.querySelector('.product-container');
     if(productContainer){
         productContainer.innerHTML = '';
-    Object.values(products).map(e => {
+        
+        Object.values(products).map(e => {
         productContainer.innerHTML += `
         <div class="product-div">
             <h1 class="product-title">${e.title}</h1>
@@ -49,7 +49,7 @@ function productRender(){
 
 // add function to all product cards buttons
 function addFuctionToAllProductCardButtons() {
-    let btns = document.querySelectorAll('.add-to-cart-btn');
+    const btns = document.querySelectorAll('.add-to-cart-btn');
     btns.forEach(e => {
         e.addEventListener('click', (e) => {
              // detta är för att vi ska hämta rätt element i arrayen med produkter
